@@ -62,17 +62,23 @@
 }
 
 
-  .stop:active ~   .box .bulb1 {
+   .stop:focus ~   .box .bulb1 {  
    
     background-color: red !important;
   }
-  .wait:active ~   .box .bulb2 {
+  .wait:focus ~   .box .bulb2 {
     
     background-color: yellow !important;
   }
-  .go:active ~ .box .bulb3{
-    background-color: green;
+  .go:focus ~ .box .bulb3{
+    background-color: green !important;
   }
+
+  .reset:focus~.box .bulb1 .bulb2 .bulb3{
+    background-color: black !important;;  
+  }
+
+
 button{
     
    
@@ -90,5 +96,30 @@ button{
 
 }
 button:hover {
-  background-color:aliceblue;
+  background-color:rgb(140, 184, 223);
+}
+
+@keyframes alternate-lights{
+  33%{
+    .bulb1{
+       background-color: red !important;
+ 
+    }
+
+  }
+  66%{
+    .bulb2{
+      background-color:yellow !important;
+
+   }
+    
+  }
+  100%{
+    .bulb3{
+      background-color:green !important;
+
+   }
+    
+  }
+    
 }
